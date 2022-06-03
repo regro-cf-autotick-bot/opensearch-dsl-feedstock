@@ -1,5 +1,5 @@
 {% set name = "opensearch-dsl" %}
-{% set version = "1.0.0" %}
+{% set version = "2.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opensearch-dsl-{{ version }}.tar.gz
-  sha256: 745fd4b05934b764f3ebca0dd9b1e7bd9b5934fcbb6c620d7087d24bcc8241c7
+  sha256: 8226381665073f110ef3d3a5027e625255df55d91d302044999c590b4d662539
 
 build:
   number: 0
