@@ -38,7 +38,7 @@ about:
   home: https://github.com/opensearch-project/opensearch-dsl-py
   summary: Python client for OpenSearch
   license: Apache-2.0
-  license_file: LICENSE
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
