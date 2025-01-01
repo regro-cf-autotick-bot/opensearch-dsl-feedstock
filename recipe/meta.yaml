@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opensearch-dsl-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opensearch-dsl-{{ version }}.tar.gz
   sha256: e54ad0d754358233503e0c08e85b77dbe07d6c00babeae62c81d8cee11965ae6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - opensearch-py >=1.0.0
-    - python >=3.6
+    - python >={{ python_min }}
     - python-dateutil
     - six
 
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/opensearch-project/opensearch-dsl-py
